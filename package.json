@@ -1,6 +1,6 @@
 {
   "name": "test-watcher-tdd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "test": "mocha"
@@ -20,7 +20,7 @@
     "clear": "0.0.1"
   },
   "bin": {
-    "text-watcher-tdd": "bin/test-watcher-tdd.bin.js"
+    "test-watcher-tdd": "bin/test-watcher-tdd.bin.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",
