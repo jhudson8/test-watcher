@@ -1,5 +1,5 @@
 var Path = require('path');
-var _handler = require('../lib/file-handler/relative-file-handler');
+var _handler = require('../lib/default-file-handler/relative-file-handler');
 
 var projectPath = '/foo/bar';
 
@@ -32,7 +32,8 @@ describe('default-file-handler', function () {
         });
         expect(fileData).to.eql({
           testFilePath: Path.resolve(projectPath, testFilePath),
-          moduleFilePath: Path.resolve(projectPath, filePath)
+          moduleFilePath: Path.resolve(projectPath, filePath),
+          glob: '*/**/*-test.js'
         });
       });
 
@@ -46,7 +47,8 @@ describe('default-file-handler', function () {
         });
         expect(fileData).to.eql({
           testFilePath: Path.resolve(projectPath, testFilePath),
-          moduleFilePath: Path.resolve(projectPath, filePath)
+          moduleFilePath: Path.resolve(projectPath, filePath),
+          glob: '*/**/*-test.js'
         });
       });
     });
@@ -77,7 +79,8 @@ describe('default-file-handler', function () {
         });
         expect(fileData).to.eql({
           testFilePath: Path.resolve(projectPath, 'src/more', testFilePath),
-          moduleFilePath: Path.resolve(projectPath, 'src/more', filePath)
+          moduleFilePath: Path.resolve(projectPath, 'src/more', filePath),
+          glob: 'src/more/**/_tests/_test-*-test.js'
         });
       });
 
@@ -91,7 +94,8 @@ describe('default-file-handler', function () {
         });
         expect(fileData).to.eql({
           testFilePath: Path.resolve(projectPath, 'src/more', testFilePath),
-          moduleFilePath: Path.resolve(projectPath, 'src/more', filePath)
+          moduleFilePath: Path.resolve(projectPath, 'src/more', filePath),
+          glob: 'src/more/**/_tests/_test-*-test.js'
         });
       });
     });
