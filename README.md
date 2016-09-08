@@ -1,9 +1,7 @@
-test-watcher-tdd
-================
+# test-watcher-tdd
 A lightweight un-opinionated watcher which will execute unit tests when either the test or module file changes.  Test driven development is the way to go!
 
-Setup
----------------
+## Setup
 ```
 npm install --save-dev test-watcher-tdd
 ```
@@ -19,8 +17,7 @@ module.exports = {
 };
 ```
 
-Running the watcher
--------------------
+## Running the watcher
 As long as you have `node_modules/.bin` in your path
 ```
 test-watcher-tdd
@@ -28,8 +25,7 @@ test-watcher-tdd
 that's it!
 
 
-Configuration Options
----------------
+## Configuration Options
 You can use a custom file handler (thing that associates test files with module files) but default handler is robust.  Use the `fileHandler` option to provide your own (more details below).
 
 * ***style***: `relative` for test files relative to the module file or N/A for test files in a separate directory

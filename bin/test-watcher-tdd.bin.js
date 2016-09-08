@@ -3,9 +3,20 @@ var Path = require('path');
 var chalk = require('chalk');
 
 try {
-  var options = require(Path.resolve(process.cwd(), '.test-watcher-tdd.js'));
+  var options;
+  var path = Path.resolve(process.cwd(), '.test-watcher-tdd.js');
+  try {
+    requre.resolve(path);
+  } catch (e) {
+    console.log('missing .test-watcher-tdd.js file.  defaulting to { style: "relative", testFileSuffix: "-test", runner: "mocha", params: ["-R", "spec"] }');
+    options = { style: 'relative', testFileSuffix: '-test', runner: 'mocha', params: ['-R', 'spec'] };
+  }
   if (!options) {
-    console.log(chalk.red('Missing ".test-watcher-tdd.js" options file'));
+    options = require(path);
+  }
+
+  if (!options) {
+    console.log(chalk.red('".test-watcher-tdd.js" did not export any configuration'));
     process.exit(-1);
   } else if (typeof options === 'function') {
     options = options() || {};
