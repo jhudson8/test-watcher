@@ -1,11 +1,11 @@
-# test-watcher-tdd
+# test-watcher
 A lightweight un-opinionated watcher which will execute unit tests when either the test or module file changes.  Test driven development is the way to go!
 
 ## Setup
 ```
-npm install --save-dev test-watcher-tdd
+npm install --save-dev test-watcher
 ```
-Create your test watcher config file `.test-watcher-tdd.js` in your project root.
+Create your test watcher config file `.test-watcher.js` in your project root.
 ```
 // simple example for mocha (you must have mocha installed)
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
 ## Running the watcher
 As long as you have `node_modules/.bin` in your path
 ```
-test-watcher-tdd
+test-watcher
 ```
 that's it!
 

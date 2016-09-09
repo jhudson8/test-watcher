@@ -1,5 +1,5 @@
 {
-  "name": "test-watcher-tdd",
+  "name": "test-watcher",
   "version": "0.0.4",
   "description": "",
   "scripts": {
@@ -7,20 +7,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhudson8/test-watcher-tdd.git"
+    "url": "git+https://github.com/jhudson8/test-watcher.git"
   },
   "author": "Joe Hudson <joehud@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jhudson8/test-watcher-tdd/issues"
+    "url": "https://github.com/jhudson8/test-watcher/issues"
   },
-  "homepage": "https://github.com/jhudson8/test-watcher-tdd#readme",
+  "homepage": "https://github.com/jhudson8/test-watcher",
   "dependencies": {
     "chalk": "^1.1.3",
     "clear": "0.0.1"
   },
   "bin": {
-    "test-watcher-tdd": "bin/test-watcher-tdd.bin.js"
+    "test-watcher": "bin/test-watcher.bin.js"
   },
   "devDependencies": {
     "chai": "^3.5.0",
